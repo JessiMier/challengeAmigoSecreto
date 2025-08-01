@@ -42,3 +42,22 @@ function mostrarLista (){
   }
 }
 
+function sortearAmigo() {
+  const resultado = document.getElementById("resultado");
+
+  // validar que haya amigos en la lista
+  if (amigos.length === 0) {
+    alert("La lista está vacía. Agrega al menos un nombre antes de sortear.");
+    return;
+  }
+
+  // generar índice aleatorio
+  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+  // obtener nombre sorteado
+  const nombreSorteado = amigos[indiceAleatorio];
+
+  // mostrar resultado en el elemento HTML
+  resultado.innerHTML = `El amigo sorteado es: <strong>${nombreSorteado}</strong>`;
+
+}
